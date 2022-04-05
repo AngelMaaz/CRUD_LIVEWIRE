@@ -1,6 +1,10 @@
 <?php
-use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Productos;
+use Illuminate\Support\Facades\Route;
+
+
+
+//use App\Http\Livewire\Productos;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +21,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum','verified'])->group(function () {
+Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::get('/productos', Productos::class);
-        Route::get('/dashboard', function(){
-              return view('dashboard');
-        })->name('dashboard');
-});  
+    Route::get('/dashboard', function(){
+        return view('dashboard');
+    })->name('dashboard');
+
+});
+
+//Route::middleware(['auth:sanctum','verified'])->group(function () {
+    //Route::get('/productos', Productos::class);
+    //Route::get('/dashboard', function(){
+      //  return view('dashboard');
+    //})->name('dashboard');
+//});  
