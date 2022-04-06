@@ -17,7 +17,7 @@
         @endif
 
 
-        <button wire:click="crear()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 my-3" >Nuevo</button>
+        <button wire:click="crear()">𝓒𝓻𝓮𝓪𝓻</button>
         @if($modal)
             @include('livewire.crear')   
         @endif    
@@ -32,14 +32,15 @@
             </tr>
         </thead>
         <tbody>
+            
             @foreach($productos as $producto)
             <tr>
                 <td class="border px-4 py-2">{{$producto->id}}</td>
                 <td class="border px-4 py-2">{{$producto->descripcion}}</td>
                 <td class="border px-4 py-2">{{$producto->cantidad}}</td>
                 <td class="border px-4 py-2 text-center">
-                    <button wire:click="editar({{$producto->id}})" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4">Editar</button>
-                    <button wire:click="borrar({{$producto->id}})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4">Borrar</button>
+                    <button wire:click="editar({{$producto->id}})" >    𝓔𝓭𝓲𝓽𝓪𝓻</button>
+                    <button wire:click="borrar({{$producto->id}})" >|   𝓑𝓸𝓻𝓻𝓪𝓻</button>
                 </td>
             </tr>
             @endforeach
